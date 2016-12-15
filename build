@@ -1,0 +1,10 @@
+rm -rf ./builds/aot
+rm -rf ./builds/prod
+
+gulp
+
+node_modules/.bin/ngc -p tsconfig-aot.json
+
+node_modules/.bin/rollup -c rollup.js
+
+echo $(date +%s) > version

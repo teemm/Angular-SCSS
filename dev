@@ -1,0 +1,6 @@
+gulp build-development
+
+echo $(date +%s) > version
+
+node_modules/.bin/tsc -w
+
